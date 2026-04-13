@@ -3,7 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { services } from '../data/services';
 
 export const Services = () => {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
 
   const getServiceName = (service: typeof services[0]) => {
     switch (language) {

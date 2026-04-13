@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { newsItems } from '../data/news';
-import { Calendar, ArrowLeft, Share2 } from 'lucide-react';
+import { Calendar, Share2 } from 'lucide-react';
 
 export const NewsDetail = () => {
   const { id } = useParams<{ id: string }>();

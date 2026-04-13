@@ -3,6 +3,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 
 const products = [
   {
+    id: '1',
     number: '1',
     titleVi: 'DẦU GỘI, XÀ LOTUS:',
     titleEn: 'LOTUS SHAMPOO & SOAP:',
@@ -12,6 +13,7 @@ const products = [
     descriptionKo: '지성 모발용, 윤기 관리, 순함'
   },
   {
+    id: '2',
     number: '2',
     titleVi: 'DẦU MASSAGE MAIA:',
     titleEn: 'MAIA MASSAGE OIL:',
@@ -21,6 +23,7 @@ const products = [
     descriptionKo: 'Maia의 시그니처 마사지 오일, 모든 사람에게 순하며 우리의 헌신적이고 숙련된 직원과 함께 치료 효과가 있습니다.'
   },
   {
+    id: '3',
     number: '3',
     titleVi: 'THẢO MỘC:',
     titleEn: 'HERBS:',
@@ -30,6 +33,7 @@ const products = [
     descriptionKo: '발 목욕 차, 전통 후에 황실 허브'
   },
   {
+    id: '4',
     number: '4',
     titleVi: 'SÁNG TRỌNG:',
     titleEn: 'PREMIUM:',

@@ -1,19 +1,9 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { Button } from '../ui/Button';
-import { useState } from 'react';
 
 export const Footer = () => {
   const { t } = useLanguage();
-  const [email, setEmail] = useState('');
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Newsletter subscription:', email);
-    setEmail('');
-    alert(t('footer.subscribe'));
-  };
 
   const quickLinks = [
     { name: t('nav.home'), path: '/' },

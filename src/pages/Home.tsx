@@ -6,13 +6,9 @@ import { ProductsSection } from '../components/sections/ProductsSection';
 import { BookingCTA } from '../components/sections/BookingCTA';
 import { Testimonials } from '../components/sections/Testimonials';
 import { PriceTable } from '../components/ui/PriceTable';
-import { useLanguage } from '../contexts/LanguageContext';
 import { bestDeals } from '../data/prices';
-import { services } from '../data/services';
-import { ServiceCard } from '../components/ui/ServiceCard';
 
 export const Home = () => {
-  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-[#FDF8F4]">

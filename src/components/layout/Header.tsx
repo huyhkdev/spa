@@ -20,16 +20,10 @@ export const Header = () => {
   const navItems = [
     { name: t('nav.home'), path: '/' },
     { name: t('nav.gallery'), path: '/hinh-anh' },
-    // { name: t('nav.services'), path: '/dich-vu' },
+    { name: t('nav.services'), path: '/dich-vu' },
     { name: t('nav.booking'), path: '/dat-lich' },
     // { name: t('nav.news'), path: '/tin-tuc' },
     { name: t('nav.contact'), path: '/lien-he' }
-  ];
-
-  const languages: Array<{ code: 'vi' | 'en' | 'ko'; flag: string }> = [
-    { code: 'vi', flag: '🇻🇳' },
-    { code: 'en', flag: '🇬🇧' },
-    { code: 'ko', flag: '🇰🇷' }
   ];
 
   return (
@@ -72,25 +66,46 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* Language Flags - Right */}
-          <div className="hidden md:flex items-center gap-2">
-            {languages.map((lang) => (
-              <button
-                key={lang.code}
-                onClick={() => setLanguage(lang.code)}
-                className={`w-10 h-10 rounded-full flex items-center justify-center text-2xl transition-all duration-300 ${
-                  language === lang.code
-                    ? scrolled
-                      ? 'bg-[#D4AF37] scale-110'
-                      : 'bg-white/20 backdrop-blur-sm scale-110'
-                    : scrolled
-                    ? 'bg-gray-100 hover:bg-gray-200'
-                    : 'bg-white/10 backdrop-blur-sm hover:bg-white/20'
+          {/* Language Dropdown & Booking Button - Right */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Language Dropdown */}
+            <div className="relative">
+              <select
+                value={language}
+                onChange={(e) => setLanguage(e.target.value as 'vi' | 'en' | 'ko')}
+                className={`pl-4 pr-10 py-2 rounded-full font-medium text-sm cursor-pointer transition-all duration-300 appearance-none ${
+                  scrolled
+                    ? 'bg-gray-100 hover:bg-gray-200 text-[#1A1A1A]'
+                    : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white'
                 }`}
+                style={{
+                  backgroundImage: scrolled 
+                    ? 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'%231A1A1A\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M19 9l-7 7-7-7\'%3E%3C/path%3E%3C/svg%3E")'
+                    : 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'white\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M19 9l-7 7-7-7\'%3E%3C/path%3E%3C/svg%3E")',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right 0.5rem center',
+                  backgroundSize: '1.5em 1.5em'
+                }}
               >
-                {lang.flag}
-              </button>
-            ))}
+                <option value="vi">🇻🇳 Tiếng Việt</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="ko">🇰🇷 한국어</option>
+              </select>
+            </div>
+
+            {/* Booking CTA Button */}
+            <a
+              href="https://www.facebook.com/people/Lam-An-Spa/61580592373465/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 ${
+                scrolled
+                  ? 'bg-[#D4AF37] text-white hover:bg-[#b8962f] shadow-md hover:shadow-lg'
+                  : 'bg-white text-[#1A1A1A] hover:bg-white/90 shadow-lg'
+              }`}
+            >
+              {t('nav.bookNow')}
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -121,20 +136,18 @@ export const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => setLanguage(lang.code)}
-                    className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl transition-all ${
-                      language === lang.code
-                        ? 'bg-[#D4AF37] scale-110'
-                        : 'bg-gray-100'
-                    }`}
-                  >
-                    {lang.flag}
-                  </button>
-                ))}
+              
+              {/* Language Dropdown - Mobile */}
+              <div className="pt-4 border-t border-gray-200">
+                <select
+                  value={language}
+                  onChange={(e) => setLanguage(e.target.value as 'vi' | 'en' | 'ko')}
+                  className="w-full px-4 py-3 rounded-lg bg-gray-100 text-[#1A1A1A] font-medium cursor-pointer"
+                >
+                  <option value="vi">🇻🇳 Tiếng Việt</option>
+                  <option value="en">🇬🇧 English</option>
+                  <option value="ko">🇰🇷 한국어</option>
+                </select>
               </div>
             </div>
           </motion.div>

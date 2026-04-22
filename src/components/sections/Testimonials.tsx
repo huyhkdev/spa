@@ -222,7 +222,7 @@ export const Testimonials = () => {
                     >
                       {getName(testimonial)}
                     </p>
-                    <p className="text-xs text-gray-600">{testimonial.date}</p>
+                    {/* <p className="text-xs text-gray-600">{testimonial.date}</p> */}
                   </div>
                 </div>
 

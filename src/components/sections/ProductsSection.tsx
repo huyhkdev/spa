@@ -5,10 +5,10 @@ const products = [
   {
     id: '1',
     number: '1',
-    titleVi: 'DẦU GỘI, XÀ LOTUS:',
+    titleVi: 'DẦU GỘI, XÀ PHÒNG LOTUS:',
     titleEn: 'LOTUS SHAMPOO & SOAP:',
     titleKo: '로투스 샴푸 및 비누:',
-    descriptionVi: 'Dành cho tóa dầu nhầy sinh, chăm sóc tốc bóa qua, lành tính',
+    descriptionVi: 'Dành cho tóc dầu nhờn, chăm sóc tóc bóng mượt, lành tính',
     descriptionEn: 'For oily hair, shine care, gentle',
     descriptionKo: '지성 모발용, 윤기 관리, 순함'
   },
@@ -18,7 +18,7 @@ const products = [
     titleVi: 'DẦU MASSAGE LAM AN:',
     titleEn: 'LAM AN MASSAGE OIL:',
     titleKo: 'LAM AN 마사지 오일:',
-    descriptionVi: 'Dầu Massage sóc quyền của Lam An, thần thiện với moi tường và có tác dụng trị liệu cưng với đời ngũ nhân viên tận tâm và có tay nghề cao.',
+    descriptionVi: 'Dầu Massage độc quyền của Lam An, thân thiện với mọi người và có tác dụng trị liệu cùng với đội ngũ nhân viên tận tâm và có tay nghề cao.',
     descriptionEn: 'Lam An\'s signature massage oil, gentle for all and has therapeutic effects with our dedicated and skilled staff.',
     descriptionKo: 'Lam An의 시그니처 마사지 오일, 모든 사람에게 순하며 우리의 헌신적이고 숙련된 직원과 함께 치료 효과가 있습니다.'
   },
@@ -28,17 +28,17 @@ const products = [
     titleVi: 'THẢO MỘC:',
     titleEn: 'HERBS:',
     titleKo: '허브:',
-    descriptionVi: 'Ngâm trà chân, có thể vội đức mộc truyền thống Cung Đình Huế',
+    descriptionVi: 'Ngâm trà chân, thảo dược truyền thống Cung Đình Huế',
     descriptionEn: 'Foot bath tea, traditional Hue Imperial herbs',
     descriptionKo: '발 목욕 차, 전통 후에 황실 허브'
   },
   {
     id: '4',
     number: '4',
-    titleVi: 'SÁNG TRỌNG:',
+    titleVi: 'SANG TRỌNG:',
     titleEn: 'PREMIUM:',
     titleKo: '프리미엄:',
-    descriptionVi: 'Khăn cotton, giường nằm ểm ái',
+    descriptionVi: 'Khăn cotton, giường nằm êm ái',
     descriptionEn: 'Cotton towels, comfortable beds',
     descriptionKo: '면 수건, 편안한 침대'
   }
@@ -71,7 +71,7 @@ export const ProductsSection = () => {
 
   const headingContent = {
     vi: {
-      subtitle: 'Sản phẩm hầu cơ',
+      subtitle: 'Sản phẩm chất lượng',
       title: 'NHỮNG SẢN PHẨM MÀ CHÚNG TÔI SỬ DỤNG',
       description: 'Đối với những khách hàng thân yêu, chúng tôi luôn cam kết cung cấp các sản phẩm tự nhiên, không độc hại, thân thiện với môi trường và có tác dụng trị liệu cùng với đội ngũ nhân viên tận tâm và có tay nghề cao.'
     },

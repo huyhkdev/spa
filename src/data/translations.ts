@@ -11,7 +11,8 @@ export const translations = {
     },
     hero: {
       slogan: 'Chạm đến sự thư thái sâu bên trong',
-      subtitle: 'Nuôi Dưỡng Thân - An Dưỡng Tâm'
+      subtitle: 'Nuôi Dưỡng Thân - An Dưỡng Tâm',
+      services: 'Dịch Vụ Của Chúng Tôi'
     },
     about: {
       title: 'Về Lam An Spa',
@@ -110,7 +111,8 @@ export const translations = {
     },
     hero: {
       slogan: 'Touch Deep Tranquility Within',
-      subtitle: 'Nourish Body - Calm Mind'
+      subtitle: 'Nourish Body - Calm Mind',
+      services: 'Our Services'
     },
     about: {
       title: 'About Lam An Spa',
@@ -129,7 +131,7 @@ export const translations = {
     pricing: {
       title: 'Special Pricing',
       subtitle: 'Best Deals',
-      sectionTitle: 'OUR TREATMENTS',
+      sectionTitle: 'OUR SERVICES',
       duration: 'Duration',
       vnd: 'VND'
     },
@@ -209,7 +211,8 @@ export const translations = {
     },
     hero: {
       slogan: '내면의 깊은 평온함에 닿다',
-      subtitle: '몸을 영양하고 마음을 진정시키다'
+      subtitle: '몸을 기르고 마음을 진정시키다',
+      services: '우리의 서비스'
     },
     about: {
       title: 'Lam An Spa 소개',
@@ -240,7 +243,7 @@ export const translations = {
       cta: '지금 예약'
     },
     footer: {
-      tagline: '몸을 영양하고 마음을 진정시키다',
+      tagline: '몸을 기르고 마음을 진정시키다',
       branches: '지점',
       branch1: '지점 1: 21 Dong Da, 후에시',
       branch2: '지점 2: 103 Tung Thien Vuong, 후에시',

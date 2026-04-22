@@ -8,7 +8,7 @@ export const Footer = () => {
   const quickLinks = [
     { name: t('nav.home'), path: '/' },
     { name: t('nav.gallery'), path: '/hinh-anh' },
-    // { name: t('nav.services'), path: '/dich-vu' },
+    { name: t('nav.services'), path: '/dich-vu' },
     { name: t('nav.booking'), path: '/dat-lich' },
     // { name: t('nav.news'), path: '/tin-tuc' },
     { name: t('nav.contact'), path: '/lien-he' }
@@ -29,9 +29,7 @@ export const Footer = () => {
             <p className="text-sm text-white/80 mb-4">
               {t('footer.tagline')}
             </p>
-            <p className="text-xs text-white/70">
-              Nuôi Dưỡng Thân - An Dưỡng Tâm
-            </p>
+     
           </div>
 
           {/* Column 2: Contact Info */}

@@ -4,7 +4,7 @@ import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
 import { Gallery } from './pages/Gallery';
-// import { Services } from './pages/Services';
+import { Services } from './pages/Services';
 import { Booking } from './pages/Booking';
 // import { News } from './pages/News';
 // import { NewsDetail } from './pages/NewsDetail';
@@ -19,7 +19,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hinh-anh" element={<Gallery />} />
-          {/* <Route path="/dich-vu" element={<Services />} /> */}
+          <Route path="/dich-vu" element={<Services />} />
           <Route path="/dat-lich" element={<Booking />} />
           {/* <Route path="/tin-tuc" element={<News />} />
           <Route path="/tin-tuc/:id" element={<NewsDetail />} /> */}

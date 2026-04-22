@@ -1,17 +1,12 @@
-import { motion } from 'framer-motion';
 import { Hero } from '../components/sections/Hero';
 import { WelcomeSection } from '../components/sections/WelcomeSection';
 import { ServicesSection } from '../components/sections/ServicesSection';
 import { ProductsSection } from '../components/sections/ProductsSection';
 import { BookingCTA } from '../components/sections/BookingCTA';
 import { Testimonials } from '../components/sections/Testimonials';
-import { PriceTable } from '../components/ui/PriceTable';
-import { bestDeals } from '../data/prices';
-import { useLanguage } from '../contexts/LanguageContext';
+
 
 export const Home = () => {
-  const { t } = useLanguage();
-
   return (
     <div className="min-h-screen bg-[#FDF8F4]">
       {/* Hero Section */}
@@ -25,58 +20,6 @@ export const Home = () => {
 
       {/* Products Section */}
       <ProductsSection />
-
-      {/* Price List Section - Best Deals */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#3D5647' }}>
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <p
-              className="text-3xl md:text-4xl mb-4"
-              style={{ 
-                fontFamily: "'Satisfy', cursive",
-                color: '#FBE39D'
-              }}
-            >
-              {t('pricing.subtitle')}
-            </p>
-            
-            <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 tracking-wider"
-              style={{ 
-                fontFamily: "'Raleway', sans-serif",
-                fontWeight: 400,
-                color: '#FBE39D'
-              }}
-            >
-              {t('pricing.sectionTitle')}
-            </h2>
-
-            {/* Decorative ornament */}
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="w-16 h-px bg-[#D4AF37]" />
-              <svg className="w-6 h-6 text-[#D4AF37]" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L9 9H2l6 5-2 7 6-4 6 4-2-7 6-5h-7z"/>
-              </svg>
-              <div className="w-16 h-px bg-[#D4AF37]" />
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <PriceTable items={bestDeals} />
-          </motion.div>
-        </div>
-      </section>
 
       {/* Booking CTA - Opening Hours */}
       <BookingCTA />

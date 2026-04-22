@@ -18,6 +18,14 @@ import nt7 from '../assets/khonggian/nt7.png';
 import nt8 from '../assets/khonggian/nt8.png';
 import nt12 from '../assets/khonggian/nt12.png';
 
+// Import service images
+import bodyMassage from '../assets/services/bodymassage.jfif';
+import footMassage from '../assets/services/foot.jfif';
+import facialService from '../assets/services/facial.jfif';
+import hairService from '../assets/services/gội.jfif';
+import bodyService from '../assets/services/body.jfif';
+import bodyScrub from '../assets/services/ttbc.jfif';
+
 const galleryImages: GalleryImage[] = [
   // Không Gian - Space Images
   {
@@ -91,6 +99,43 @@ const galleryImages: GalleryImage[] = [
     src: nt12,
     alt: 'Lam An Spa - Không gian 12',
     category: 'space'
+  },
+  // Dịch Vụ - Services Images
+  {
+    id: '13',
+    src: bodyMassage,
+    alt: 'Massage Toàn Thân - Full Body Massage',
+    category: 'services'
+  },
+  {
+    id: '14',
+    src: footMassage,
+    alt: 'Massage Chân - Foot Massage',
+    category: 'services'
+  },
+  {
+    id: '15',
+    src: facialService,
+    alt: 'Chăm Sóc Da Mặt - Facial Care',
+    category: 'services'
+  },
+  {
+    id: '16',
+    src: hairService,
+    alt: 'Gội Đầu Dưỡng Sinh - Hair Therapy',
+    category: 'services'
+  },
+  {
+    id: '17',
+    src: bodyService,
+    alt: 'Liệu Trình Đặc Trưng - Signature Treatment',
+    category: 'services'
+  },
+  {
+    id: '18',
+    src: bodyScrub,
+    alt: 'Tẩy Tế Bào Chết - Body Scrub',
+    category: 'services'
   }
 ];
 
@@ -102,7 +147,8 @@ export const Gallery = () => {
 
   const categories = [
     { id: 'all', label: t('gallery.all') },
-    { id: 'space', label: t('gallery.space') }
+    { id: 'space', label: t('gallery.space') },
+    { id: 'services', label: t('gallery.services') }
   ];
 
   const filteredImages = selectedCategory === 'all'
@@ -135,7 +181,7 @@ export const Gallery = () => {
             >
               {t('gallery.subtitle')}
             </p>
-            <h1
+            {/* <h1
               className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 tracking-wider"
               style={{ 
                 fontFamily: "'Raleway', sans-serif",
@@ -144,7 +190,7 @@ export const Gallery = () => {
               }}
             >
               {t('gallery.title')}
-            </h1>
+            </h1> */}
             <p className="text-white/80 max-w-2xl mx-auto">
               {language === 'vi' ? 'Hình ảnh không gian, dịch vụ và trải nghiệm tại Lam An Spa' : 
                language === 'en' ? 'Images of space, services and experiences at Lam An Spa' :

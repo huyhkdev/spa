@@ -151,6 +151,24 @@ export const Gallery = () => {
     { id: 'services', label: t('gallery.services') }
   ];
 
+  const getImageCaption = (alt: string) => {
+    // If alt contains both Vietnamese and English (separated by ' - '), split it
+    if (alt.includes(' - ') && !alt.startsWith('Lam An Spa')) {
+      const [viText, enText] = alt.split(' - ');
+      return language === 'en' ? enText : viText;
+    }
+    
+    // For space images with pattern "Lam An Spa - Không gian X"
+    if (alt.includes('Không gian')) {
+      const spaceNumber = alt.match(/\d+(-\d+)?/)?.[0] || '';
+      return language === 'en' 
+        ? `Lam An Spa - Space ${spaceNumber}`
+        : alt;
+    }
+    
+    return alt;
+  };
+
   const filteredImages = selectedCategory === 'all'
     ? galleryImages
     : galleryImages.filter(img => img.category === selectedCategory);
@@ -239,7 +257,7 @@ export const Gallery = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-4 left-4 right-4">
-                      <p className="text-white text-sm font-medium">{image.alt}</p>
+                      <p className="text-white text-sm font-medium">{getImageCaption(image.alt)}</p>
                     </div>
                   </div>
                 </div>

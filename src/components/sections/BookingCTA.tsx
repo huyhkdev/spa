@@ -29,7 +29,7 @@ export const BookingCTA = () => {
   return (
     <section
       className="relative py-20 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
-      style={{ backgroundColor: '#872D29' }}
+      style={{ backgroundColor: '#3D5647' }}
     >
       {/* Decorative Floral Pattern - Left */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1/3 opacity-40">
@@ -107,7 +107,7 @@ export const BookingCTA = () => {
               fontWeight: 400,
             }}
           >
-            MAIA IMPERIAL SPA
+            LAM AN SPA
           </h2>
 
           {/* Subtitle */}
@@ -129,12 +129,12 @@ export const BookingCTA = () => {
               fontWeight: 300,
             }}
           >
-            9:00 – 00:30
+            8:00 AM – 11:00 PM
           </p>
 
           {/* Book Now Button */}
           <motion.a
-            href="https://m.me/YOUR_PAGE_ID"
+            href="https://www.facebook.com/people/Lam-An-Spa/61580592373465/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-12 py-4 bg-white/95 hover:bg-white text-[#9B4444] rounded-full text-sm md:text-base font-medium uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl"

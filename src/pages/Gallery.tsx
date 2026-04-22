@@ -4,93 +4,105 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Lightbox } from '../components/ui/Lightbox';
 import type { GalleryImage } from '../types';
 
+// Import images from khonggian folder
+import nt1 from '../assets/khonggian/nt1.png';
+import nt2 from '../assets/khonggian/nt2.png';
+import nt21 from '../assets/khonggian/nt2-1.png';
+import nt22 from '../assets/khonggian/nt2-2.png';
+import nt3 from '../assets/khonggian/nt3.png';
+import nt4 from '../assets/khonggian/nt4.png';
+import nt44 from '../assets/khonggian/nt4-4.png';
+import nt5 from '../assets/khonggian/nt5.png';
+import nt6 from '../assets/khonggian/nt6.png';
+import nt7 from '../assets/khonggian/nt7.png';
+import nt8 from '../assets/khonggian/nt8.png';
+import nt12 from '../assets/khonggian/nt12.png';
+
 const galleryImages: GalleryImage[] = [
+  // Không Gian - Space Images
   {
     id: '1',
-    src: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80',
-    alt: 'Spa Interior',
+    src: nt1,
+    alt: 'Lam An Spa - Không gian 1',
     category: 'space'
   },
   {
     id: '2',
-    src: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80',
-    alt: 'Massage Service',
-    category: 'services'
+    src: nt2,
+    alt: 'Lam An Spa - Không gian 2',
+    category: 'space'
   },
   {
     id: '3',
-    src: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80',
-    alt: 'Relaxation Area',
+    src: nt21,
+    alt: 'Lam An Spa - Không gian 2-1',
     category: 'space'
   },
   {
     id: '4',
-    src: 'https://images.unsplash.com/photo-1560343776-97e7d202ff0e?w=800&q=80',
-    alt: 'Foot Massage',
-    category: 'services'
+    src: nt22,
+    alt: 'Lam An Spa - Không gian 2-2',
+    category: 'space'
   },
   {
     id: '5',
-    src: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80',
-    alt: 'Hair Treatment',
-    category: 'services'
+    src: nt3,
+    alt: 'Lam An Spa - Không gian 3',
+    category: 'space'
   },
   {
     id: '6',
-    src: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80',
-    alt: 'Facial Treatment',
-    category: 'services'
+    src: nt4,
+    alt: 'Lam An Spa - Không gian 4',
+    category: 'space'
   },
   {
     id: '7',
-    src: 'https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=800&q=80',
-    alt: 'Treatment Room',
+    src: nt44,
+    alt: 'Lam An Spa - Không gian 4-4',
     category: 'space'
   },
   {
     id: '8',
-    src: 'https://images.unsplash.com/photo-1562088287-f7e6e21c5a30?w=800&q=80',
-    alt: 'Reception',
+    src: nt5,
+    alt: 'Lam An Spa - Không gian 5',
     category: 'space'
   },
   {
     id: '9',
-    src: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=80',
-    alt: 'Therapist at work',
-    category: 'staff'
+    src: nt6,
+    alt: 'Lam An Spa - Không gian 6',
+    category: 'space'
   },
   {
     id: '10',
-    src: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&q=80',
-    alt: 'Happy Customer',
-    category: 'customers'
+    src: nt7,
+    alt: 'Lam An Spa - Không gian 7',
+    category: 'space'
   },
   {
     id: '11',
-    src: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&q=80',
-    alt: 'Spa Products',
+    src: nt8,
+    alt: 'Lam An Spa - Không gian 8',
     category: 'space'
   },
   {
     id: '12',
-    src: 'https://images.unsplash.com/photo-1610439856688-13f5a6a6c40d?w=800&q=80',
-    alt: 'Herbal Treatment',
-    category: 'services'
+    src: nt12,
+    alt: 'Lam An Spa - Không gian 12',
+    category: 'space'
   }
 ];
 
 export const Gallery = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const categories = [
     { id: 'all', label: t('gallery.all') },
-    { id: 'space', label: t('gallery.space') },
-    { id: 'services', label: t('gallery.services') },
-    { id: 'staff', label: t('gallery.staff') },
-    { id: 'customers', label: t('gallery.customers') }
+    { id: 'space', label: t('gallery.space') }
   ];
 
   const filteredImages = selectedCategory === 'all'
@@ -105,7 +117,7 @@ export const Gallery = () => {
   return (
     <div className="min-h-screen bg-[#FDF8F4]">
       {/* Gallery Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#872D29' }}>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#3D5647' }}>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -118,22 +130,25 @@ export const Gallery = () => {
               className="text-3xl md:text-4xl mb-4"
               style={{ 
                 fontFamily: "'Satisfy', cursive",
-                color: '#D4AF37'
+                color: '#FBE39D'
               }}
             >
-              Gallery
+              {t('gallery.subtitle')}
             </p>
             <h1
-              className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 text-white tracking-wider"
+              className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 tracking-wider"
               style={{ 
                 fontFamily: "'Raleway', sans-serif",
-                fontWeight: 400
+                fontWeight: 400,
+                color: '#FBE39D'
               }}
             >
               {t('gallery.title')}
             </h1>
             <p className="text-white/80 max-w-2xl mx-auto">
-              Hình ảnh không gian, dịch vụ và trải nghiệm tại Maia Imperial Spa
+              {language === 'vi' ? 'Hình ảnh không gian, dịch vụ và trải nghiệm tại Lam An Spa' : 
+               language === 'en' ? 'Images of space, services and experiences at Lam An Spa' :
+               'Lam An Spa의 공간, 서비스 및 경험 이미지'}
             </p>
           </motion.div>
 

@@ -7,8 +7,10 @@ import { BookingCTA } from '../components/sections/BookingCTA';
 import { Testimonials } from '../components/sections/Testimonials';
 import { PriceTable } from '../components/ui/PriceTable';
 import { bestDeals } from '../data/prices';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const Home = () => {
+  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-[#FDF8F4]">
@@ -25,7 +27,7 @@ export const Home = () => {
       <ProductsSection />
 
       {/* Price List Section - Best Deals */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#872D29' }}>
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#3D5647' }}>
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -38,20 +40,21 @@ export const Home = () => {
               className="text-3xl md:text-4xl mb-4"
               style={{ 
                 fontFamily: "'Satisfy', cursive",
-                color: '#D4AF37'
+                color: '#FBE39D'
               }}
             >
-              Best Deals
+              {t('pricing.subtitle')}
             </p>
             
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 text-white tracking-wider"
+              className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 tracking-wider"
               style={{ 
                 fontFamily: "'Raleway', sans-serif",
-                fontWeight: 400
+                fontWeight: 400,
+                color: '#FBE39D'
               }}
             >
-              NHỮNG LIỆU TRÌNH CỦA CHÚNG TÔI
+              {t('pricing.sectionTitle')}
             </h2>
 
             {/* Decorative ornament */}
@@ -82,7 +85,7 @@ export const Home = () => {
       <Testimonials />
 
       {/* Featured Services */}
-      {/* <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#872D29' }}>
+      {/* <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#3D5647' }}>
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +132,7 @@ export const Home = () => {
           <div className="text-center mt-12">
             <motion.a
               href="/dich-vu"
-              className="inline-block px-8 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:text-[#872D29] transition-all duration-300"
+              className="inline-block px-8 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:text-[#3D5647] transition-all duration-300"
               style={{ fontFamily: "'Raleway', sans-serif", fontWeight: 500 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

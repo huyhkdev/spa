@@ -2,48 +2,48 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export const Contact = () => {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const getContent = () => {
     switch (language) {
       case 'en':
         return {
-          subtitle: 'Contact methods',
-          title: 'YOU CAN FIND US THROUGH',
-          location1Title: 'Maia Imperial Spa',
+          subtitle: t('contact.subtitle'),
+          title: t('contact.titleMain'),
+          location1Title: 'Lam An Spa',
           location1Text: 'You can book an appointment online.',
-          phone: 'Phone: 0905686226',
-          hoursTitle: 'Opening hours',
-          hours: 'Monday – Sunday: 9:00 AM – 10:00 PM',
-          location2Title: 'Maia Imperial Spa',
-          address: '21 Dong Da Street, Phu Nhuan District, Hue City, Hue 49000',
-          mapTitle: 'MAIA MASSAGE & SPA'
+          phone: 'Phone: 0915954699',
+          hoursTitle: t('contact.hours'),
+          hours: t('contact.hoursValue'),
+          location2Title: 'Lam An Spa',
+          address: '28 Vo Thi Sau Street, Thuan Hoa District, Hue City, Hue 49000',
+          mapTitle: 'LAM AN MASSAGE & SPA'
         };
       case 'ko':
         return {
-          subtitle: '연락 방법',
-          title: '다음을 통해 저희를 찾을 수 있습니다',
-          location1Title: 'Maia Imperial Spa',
+          subtitle: t('contact.subtitle'),
+          title: t('contact.titleMain'),
+          location1Title: 'Lam An Spa',
           location1Text: '온라인으로 예약하실 수 있습니다.',
-          phone: '전화: 0905686226',
-          hoursTitle: '영업 시간',
-          hours: '월요일 – 일요일: 오전 9시 – 오후 10시',
-          location2Title: 'Maia Imperial Spa',
-          address: '21 Dong Da Street, Phu Nhuan District, Hue City, Hue 49000',
-          mapTitle: 'MAIA MASSAGE & SPA'
+          phone: '전화: 0915954699',
+          hoursTitle: t('contact.hours'),
+          hours: t('contact.hoursValue'),
+          location2Title: 'Lam An Spa',
+          address: '28 Vo Thi Sau Street, Thuan Hoa District, Hue City, Hue 49000',
+          mapTitle: 'LAM AN MASSAGE & SPA'
         };
       default:
         return {
-          subtitle: 'Contact methods',
-          title: 'YOU CAN FIND US THROUGH',
-          location1Title: 'Maia Imperial Spa',
-          location1Text: 'You can book an appointment online.',
-          phone: 'Phone: 0905686226',
-          hoursTitle: 'Opening hours',
-          hours: 'Monday – Sunday: 9:00 AM – 10:00 PM',
-          location2Title: 'Maia Imperial Spa',
-          address: '21 Dong Da Street, Phu Nhuan District, Hue City, Hue 49000',
-          mapTitle: 'MAIA MASSAGE & SPA'
+          subtitle: t('contact.subtitle'),
+          title: t('contact.titleMain'),
+          location1Title: 'Lam An Spa',
+          location1Text: 'Bạn có thể đặt lịch hẹn trực tuyến.',
+          phone: 'Điện thoại: 0915954699',
+          hoursTitle: t('contact.hours'),
+          hours: t('contact.hoursValue'),
+          location2Title: 'Lam An Spa',
+          address: '28 Võ Thị Sáu, Thuận Hòa, TP Huế, Huế 49000',
+          mapTitle: 'LAM AN MASSAGE & SPA'
         };
     }
   };
@@ -53,7 +53,7 @@ export const Contact = () => {
   return (
     <div className="min-h-screen bg-[#FDF8F4]">
       {/* Contact Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#872D29' }}>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#3D5647' }}>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -67,7 +67,7 @@ export const Contact = () => {
               className="text-3xl md:text-4xl mb-6"
               style={{ 
                 fontFamily: "'Satisfy', cursive",
-                color: '#D4AF37'
+                color: '#FBE39D'
               }}
             >
               {content.subtitle}
@@ -75,10 +75,11 @@ export const Contact = () => {
             
             {/* Title */}
             <h1
-              className="text-2xl md:text-3xl lg:text-4xl font-normal mb-8 text-[#D4AF37] tracking-[0.2em] uppercase"
+              className="text-2xl md:text-3xl lg:text-4xl font-normal mb-8 tracking-[0.2em] uppercase"
               style={{ 
                 fontFamily: "'Raleway', sans-serif",
-                fontWeight: 400
+                fontWeight: 400,
+                color: '#FBE39D'
               }}
             >
               {content.title}
@@ -197,14 +198,14 @@ export const Contact = () => {
             {/* Google Map Embed */}
             <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.247896742357!2d107.59266647590803!3d16.46024263175938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a13f2c4d79d7%3A0x4e8a85a4e5d0c5a8!2sMaia%20Massage%20%26%20Spa!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.0754791766584!2d107.59389467590816!3d16.470570282055906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a122b8bf63c5%3A0x5504279cbd65b0b!2s28%20V%C3%B5%20Th%E1%BB%8B%20S%C3%A1u%2C%20Ph%C3%BA%20H%E1%BB%99i%2C%20Thu%E1%BA%ADn%20H%C3%B3a%2C%20Hu%E1%BA%BF%2049000%2C%20Vietnam!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Maia Imperial Spa Location"
+                title="Lam An Spa Location"
               />
             </div>
           </motion.div>

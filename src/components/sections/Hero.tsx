@@ -2,25 +2,28 @@ import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay, EffectFade } from 'swiper/modules';
 import { useLanguage } from '../../contexts/LanguageContext';
+import slider1 from '../../assets/slider1.png';
+import slider2 from '../../assets/slider2.png';
+import slider3 from '../../assets/slider3.png';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const heroSlides = [
   {
-    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1920&q=80',
+    image: slider1,
+    titleVi: 'Nuôi Dưỡng Thân - An Dưỡng Tâm',
+    titleEn: 'Nourish Body - Calm Mind',
+    titleKo: '몸을 영양하고 마음을 진정시키다'
+  },
+  {
+    image: slider2,
     titleVi: 'Chạm đến sự thư thái sâu bên trong',
-    titleEn: 'Touch Deep Relaxation Within',
-    titleKo: '깊은 휴식을 경험하세요'
+    titleEn: 'Touch Deep Tranquility Within',
+    titleKo: '내면의 깊은 평온함에 닿다'
   },
   {
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=80',
-    titleVi: 'Tinh hoa cung đình Huế',
-    titleEn: 'Imperial Hue Heritage',
-    titleKo: '후에 황실 유산'
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1920&q=80',
+    image: slider3,
     titleVi: 'Trải nghiệm spa đẳng cấp',
     titleEn: 'Premium Spa Experience',
     titleKo: '프리미엄 스파 경험'
@@ -110,7 +113,7 @@ export const Hero = () => {
 
                     {/* Book Appointment Button */}
                     <motion.a
-                      href="https://m.me/YOUR_PAGE_ID"
+                      href="https://www.facebook.com/people/Lam-An-Spa/61580592373465/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-3 px-8 py-4 bg-[#D4AF37] text-white font-semibold uppercase tracking-wider rounded-full hover:bg-[#b8962f] transition-all duration-300 shadow-lg hover:shadow-2xl text-sm md:text-base"
@@ -121,7 +124,7 @@ export const Hero = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.896 1.447 5.482 3.71 7.162V22l3.447-1.89c.92.255 1.895.39 2.843.39 5.523 0 10-4.145 10-9.257C22 6.145 17.523 2 12 2zm.993 12.535l-2.557-2.73-4.993 2.73 5.492-5.828 2.623 2.73 4.927-2.73-5.492 5.828z"/>
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                       </svg>
                       BOOK YOUR APPOINTMENT NOW!
                     </motion.a>

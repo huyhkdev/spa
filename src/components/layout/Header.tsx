@@ -20,9 +20,9 @@ export const Header = () => {
   const navItems = [
     { name: t('nav.home'), path: '/' },
     { name: t('nav.gallery'), path: '/hinh-anh' },
-    { name: t('nav.services'), path: '/dich-vu' },
+    // { name: t('nav.services'), path: '/dich-vu' },
     { name: t('nav.booking'), path: '/dat-lich' },
-    { name: t('nav.news'), path: '/tin-tuc' },
+    // { name: t('nav.news'), path: '/tin-tuc' },
     { name: t('nav.contact'), path: '/lien-he' }
   ];
 
@@ -48,29 +48,12 @@ export const Header = () => {
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-3"
             >
-              {/* Logo Icon Placeholder */}
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                scrolled ? 'bg-[#D4AF37]' : 'bg-white/10 backdrop-blur-sm'
-              }`}>
-                <span className="text-white font-bold text-xl">M</span>
-              </div>
-              <div className="flex flex-col">
-                <span
-                  className={`text-xl font-bold leading-tight ${
-                    scrolled ? 'text-[#D4AF37]' : 'text-white'
-                  }`}
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  Maia
-                </span>
-                <span
-                  className={`text-xs ${
-                    scrolled ? 'text-gray-600' : 'text-white/80'
-                  }`}
-                >
-                  Imperial Spa
-                </span>
-              </div>
+              {/* Logo Image */}
+              <img 
+                src="/logo.png" 
+                alt="Lam An Spa" 
+                className="h-14 w-14 rounded-full object-cover border-2 border-[#D4AF37]/40 shadow-md"
+              />
             </motion.div>
           </Link>
 

@@ -42,7 +42,7 @@ export const News = () => {
   return (
     <div className="min-h-screen bg-[#FDF8F4]">
       {/* News Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#872D29' }}>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#3D5647' }}>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -70,7 +70,7 @@ export const News = () => {
               {t('news.title')}
             </h1>
             <p className="text-white/80 max-w-2xl mx-auto">
-              Cập nhật tin tức, ưu đãi và mẹo chăm sóc sức khỏe từ Maia Imperial Spa
+              Cập nhật tin tức, ưu đãi và mẹo chăm sóc sức khỏe từ Lam An Spa
             </p>
           </motion.div>
 

@@ -7,11 +7,11 @@ export const Booking = () => {
   const getTitle = () => {
     switch (language) {
       case 'en':
-        return 'MAIA IMPERIAL SPA';
+        return 'LAM AN SPA';
       case 'ko':
-        return 'MAIA IMPERIAL SPA';
+        return 'LAM AN SPA';
       default:
-        return 'MAIA IMPERIAL SPA';
+        return 'LAM AN SPA';
     }
   };
 
@@ -37,34 +37,12 @@ export const Booking = () => {
     }
   };
 
-  const getScheduleTitle = () => {
-    switch (language) {
-      case 'en':
-        return 'MORNING SESSION';
-      case 'ko':
-        return '오전 세션';
-      default:
-        return 'BUỔI SÁNG';
-    }
-  };
-
-  const getAfternoonTitle = () => {
-    switch (language) {
-      case 'en':
-        return 'AFTERNOON & EVENING';
-      case 'ko':
-        return '오후 및 저녁';
-      default:
-        return 'BUỔI CHIỀU & TỐI';
-    }
-  };
-
   return (
-    <div className=" bg-[#FDF8F4]">
+    <div className="min-h-screen" style={{ backgroundColor: '#3D5647' }}>
       {/* Booking Section */}
       <section
-        className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
-        style={{ backgroundColor: '#872D29' }}
+        className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center"
+        style={{ backgroundColor: '#3D5647' }}
       >
         {/* Decorative Floral Pattern - Left */}
         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1/3 opacity-40">
@@ -151,58 +129,24 @@ export const Booking = () => {
             </p>
 
             {/* Schedule Times */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
-              {/* Morning Session */}
-              <div>
-                <p
-                  className="text-white/80 text-sm uppercase tracking-wider mb-3"
-                  style={{
-                    fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 400,
-                  }}
-                >
-                  {getScheduleTitle()}
-                </p>
-                <p
-                  className="text-4xl md:text-5xl font-light text-white tracking-wide"
-                  style={{
-                    fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 300,
-                  }}
-                >
-                  9:00 AM – 12:30 AM
-                </p>
-              </div>
-
-              {/* Afternoon/Evening Session */}
-              <div>
-                <p
-                  className="text-white/80 text-sm uppercase tracking-wider mb-3"
-                  style={{
-                    fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 400,
-                  }}
-                >
-                  {getAfternoonTitle()}
-                </p>
-                <p
-                  className="text-4xl md:text-5xl font-light text-white tracking-wide"
-                  style={{
-                    fontFamily: "'Raleway', sans-serif",
-                    fontWeight: 300,
-                  }}
-                >
-                  1:30 PM – 11:00 PM
-                </p>
-              </div>
+            <div className="mb-12 max-w-2xl mx-auto">
+              <p
+                className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-wide"
+                style={{
+                  fontFamily: "'Raleway', sans-serif",
+                  fontWeight: 300,
+                }}
+              >
+                8:00 AM – 11:00 PM
+              </p>
             </div>
 
             {/* Book Now Button with Messenger Icon */}
             <motion.a
-              href="https://m.me/YOUR_PAGE_ID"
+              href="https://www.facebook.com/people/Lam-An-Spa/61580592373465/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-12 py-4 bg-white/95 hover:bg-white text-[#872D29] rounded-full text-sm md:text-base font-medium uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-3 px-12 py-4 bg-white/95 hover:bg-white text-[#3D5647] rounded-full text-sm md:text-base font-medium uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl"
               style={{
                 fontFamily: "'Raleway', sans-serif",
                 fontWeight: 500,
@@ -212,7 +156,7 @@ export const Booking = () => {
             >
               {/* Messenger Icon */}
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.899 1.438 5.483 3.688 7.171V22l3.486-1.914c.93.257 1.913.393 2.826.393 5.523 0 10-4.145 10-9.243C22 6.145 17.523 2 12 2zm1.032 12.433l-2.558-2.73-4.994 2.73 5.488-5.823 2.623 2.73 4.929-2.73-5.488 5.823z"/>
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
               {getButtonText()}
             </motion.a>

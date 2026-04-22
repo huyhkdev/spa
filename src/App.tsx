@@ -19,10 +19,10 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hinh-anh" element={<Gallery />} />
-          <Route path="/dich-vu" element={<Services />} />
+          {/* <Route path="/dich-vu" element={<Services />} /> */}
           <Route path="/dat-lich" element={<Booking />} />
-          <Route path="/tin-tuc" element={<News />} />
-          <Route path="/tin-tuc/:id" element={<NewsDetail />} />
+          {/* <Route path="/tin-tuc" element={<News />} />
+          <Route path="/tin-tuc/:id" element={<NewsDetail />} /> */}
           <Route path="/lien-he" element={<Contact />} />
         </Routes>
       </main>

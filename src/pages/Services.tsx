@@ -3,7 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { services } from '../data/services';
 
 export const Services = () => {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const getServiceName = (service: typeof services[0]) => {
     switch (language) {
@@ -34,7 +34,7 @@ export const Services = () => {
   return (
     <div className="min-h-screen bg-[#FDF8F4]">
       {/* Services Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#872D29' }}>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#3D5647' }}>
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <motion.div
@@ -50,7 +50,7 @@ export const Services = () => {
                 color: '#D4AF37'
               }}
             >
-              Best Deals
+              {t('pricing.subtitle')}
             </p>
             <h1
               className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 text-white tracking-wider"
@@ -59,7 +59,7 @@ export const Services = () => {
                 fontWeight: 400
               }}
             >
-              OUR TREATMENTS
+              {t('pricing.sectionTitle')}
             </h1>
 
             {/* Decorative ornament */}

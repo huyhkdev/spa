@@ -15,12 +15,12 @@ const products = [
   {
     id: '2',
     number: '2',
-    titleVi: 'DẦU MASSAGE MAIA:',
-    titleEn: 'MAIA MASSAGE OIL:',
-    titleKo: 'MAIA 마사지 오일:',
-    descriptionVi: 'Dầu Massage sóc quyền của Maia, thần thiện với moi tường và có tác dụng trị liệu cưng với đời ngũ nhân viên tận tâm và có tay nghề cao.',
-    descriptionEn: 'Maia\'s signature massage oil, gentle for all and has therapeutic effects with our dedicated and skilled staff.',
-    descriptionKo: 'Maia의 시그니처 마사지 오일, 모든 사람에게 순하며 우리의 헌신적이고 숙련된 직원과 함께 치료 효과가 있습니다.'
+    titleVi: 'DẦU MASSAGE LAM AN:',
+    titleEn: 'LAM AN MASSAGE OIL:',
+    titleKo: 'LAM AN 마사지 오일:',
+    descriptionVi: 'Dầu Massage sóc quyền của Lam An, thần thiện với moi tường và có tác dụng trị liệu cưng với đời ngũ nhân viên tận tâm và có tay nghề cao.',
+    descriptionEn: 'Lam An\'s signature massage oil, gentle for all and has therapeutic effects with our dedicated and skilled staff.',
+    descriptionKo: 'Lam An의 시그니처 마사지 오일, 모든 사람에게 순하며 우리의 헌신적이고 숙련된 직원과 함께 치료 효과가 있습니다.'
   },
   {
     id: '3',
@@ -90,7 +90,7 @@ export const ProductsSection = () => {
   const currentContent = headingContent[language];
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#872D29' }}>
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#3D5647' }}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div

@@ -1,6 +1,6 @@
-# Maia Imperial Spa Website
+# Lam An Spa Website
 
-A luxurious, multi-page spa website featuring Imperial Hue Heritage aesthetics, built with React, TypeScript, Tailwind CSS, and Framer Motion.
+A luxurious, multi-page spa website featuring Lam An Spa aesthetics, built with React, TypeScript, Tailwind CSS, and Framer Motion.
 
 ## Features
 
@@ -115,7 +115,7 @@ Switch languages using the language selector in the header.
 #### Services Page
 - Service cards with images, descriptions, and pricing
 - Category tabs (All, Massage, Hair Care, Skin Care)
-- Featured "Maia Signature Massage"
+- Featured "Lam An Signature Massage"
 
 #### Booking Page
 - Digital service menu with tabs
@@ -153,4 +153,4 @@ Switch languages using the language selector in the header.
 
 ## License
 
-All rights reserved © 2024 Maia Imperial Spa
+All rights reserved © 2024 Lam An Spa

@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Star } from 'lucide-react';
+import avatar1 from '../../assets/testimonials/testimonial-avatar-1.jpg';
+import avatar2 from '../../assets/testimonials/testimonial-avatar-2.jpg';
+import avatar3 from '../../assets/testimonials/testimonial-avatar-3.jpg';
 
 interface Testimonial {
   id: number;
@@ -21,7 +24,7 @@ const testimonials: Testimonial[] = [
     name: 'Nguyễn Thị Lan',
     nameEn: 'Nguyen Thi Lan',
     nameKo: '응우옌 티 란',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop',
+    avatar: avatar1,
     rating: 5,
     text: 'Dịch vụ tuyệt vời! Không gian spa sang trọng và yên tĩnh. Các kỹ thuật viên rất chuyên nghiệp và tận tâm. Tôi cảm thấy thư giãn và tái tạo năng lượng sau liệu trình massage.',
     textEn: 'Excellent service! The spa space is luxurious and peaceful. The technicians are very professional and dedicated. I felt relaxed and rejuvenated after the massage treatment.',
@@ -33,11 +36,11 @@ const testimonials: Testimonial[] = [
     name: 'Trần Văn Minh',
     nameEn: 'Tran Van Minh',
     nameKo: '트란 반 민',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop',
+    avatar: avatar2,
     rating: 5,
-    text: 'Trải nghiệm tuyệt vời tại Maia Imperial Spa. Từ không gian, dịch vụ đến thái độ nhân viên đều rất chuyên nghiệp. Tôi sẽ quay lại và giới thiệu cho bạn bè.',
-    textEn: 'Wonderful experience at Maia Imperial Spa. From the space, service to staff attitude, everything is very professional. I will come back and recommend to friends.',
-    textKo: 'Maia Imperial Spa에서 훌륭한 경험을 했습니다. 공간, 서비스, 직원 태도까지 모두 매우 전문적입니다. 다시 방문하고 친구들에게 추천하겠습니다.',
+    text: 'Trải nghiệm tuyệt vời tại Lam An Spa. Từ không gian, dịch vụ đến thái độ nhân viên đều rất chuyên nghiệp. Tôi sẽ quay lại và giới thiệu cho bạn bè.',
+    textEn: 'Wonderful experience at Lam An Spa. From the space, service to staff attitude, everything is very professional. I will come back and recommend to friends.',
+    textKo: 'Lam An Spa에서 훌륭한 경험을 했습니다. 공간, 서비스, 직원 태도까지 모두 매우 전문적입니다. 다시 방문하고 친구들에게 추천하겠습니다.',
     date: '18/03/2024'
   },
   {
@@ -45,7 +48,7 @@ const testimonials: Testimonial[] = [
     name: 'Lê Thị Hương',
     nameEn: 'Le Thi Huong',
     nameKo: '레 티 흐엉',
-    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop',
+    avatar: avatar3,
     rating: 5,
     text: 'Spa có không gian đẹp và sang trọng. Liệu trình massage chăm sóc da rất hiệu quả. Nhân viên tư vấn nhiệt tình và chu đáo. Rất hài lòng với dịch vụ!',
     textEn: 'The spa has a beautiful and luxurious space. The facial massage treatment is very effective. The staff provides enthusiastic and thoughtful consultation. Very satisfied with the service!',
@@ -55,7 +58,7 @@ const testimonials: Testimonial[] = [
 ];
 
 export const Testimonials = () => {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const getName = (testimonial: Testimonial) => {
     switch (language) {
@@ -80,20 +83,13 @@ export const Testimonials = () => {
   };
 
   const getTitle = () => {
-    switch (language) {
-      case 'en':
-        return 'WHAT OUR CUSTOMERS SAY ABOUT US';
-      case 'ko':
-        return '고객님들의 평가';
-      default:
-        return 'NHỮNG GÌ KHÁCH HÀNG NHẮC ĐẾN CHÚNG TÔI';
-    }
+    return t('testimonials.title');
   };
 
   return (
     <section
       className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
-      style={{ backgroundColor: '#872D29' }}
+      style={{ backgroundColor: '#3D5647' }}
     >
       {/* Decorative Floral Pattern - Top */}
       <div className="absolute top-0 left-0 right-0 w-full h-32 opacity-40">
@@ -139,7 +135,7 @@ export const Testimonials = () => {
               color: '#D4AF37'
             }}
           >
-            Feedbacks
+            {t('testimonials.subtitle')}
           </p>
 
           <h2

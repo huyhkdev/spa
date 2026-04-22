@@ -128,9 +128,9 @@ export const services: Service[] = [
   },
   {
     id: '10',
-    name: 'Maia Signature Massage',
-    nameEn: 'Maia Signature Massage',
-    nameKo: 'Maia 시그니처 마사지',
+    name: 'Lam An Signature Massage',
+    nameEn: 'Lam An Signature Massage',
+    nameKo: 'Lam An 시그니처 마사지',
     description: 'Massage toàn thân kết hợp tinh dầu thảo dược và đá Bazan',
     descriptionEn: 'Full body massage combining herbal essential oils and Bazan stones',
     descriptionKo: '허브 에센셜 오일과 바잔 스톤을 결합한 전신 마사지',

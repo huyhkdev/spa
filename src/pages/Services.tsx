@@ -95,6 +95,13 @@ export const Services = () => {
     return language === 'en' ? (item.descriptionEn || '') : item.description;
   };
 
+  const formatDuration = (duration: string) => {
+    if (language === 'en') {
+      return duration.replace('phút', 'minutes').replace(' phút', ' minutes');
+    }
+    return duration;
+  };
+
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('vi-VN').format(price);
   };
@@ -213,15 +220,14 @@ export const Services = () => {
                           {getItemDescription(item)}
                         </p>
                       )}
-                      <div className="flex items-center justify-between mb-1">
+                      <div className="flex items-center justify-between">
                         <span className="text-[#FBE39D]/80 text-sm">
-                          {item.duration}
+                          {formatDuration(item.duration)}
                         </span>
                         <span className="text-white text-lg font-normal">
-                          {formatPrice(item.price)}
+                          {formatPrice(item.price)} <span className="text-[#D4AF37]/60 text-xs">VNĐ</span>
                         </span>
                       </div>
-                      <div className="text-[#D4AF37]/60 text-xs">VNĐ</div>
                     </motion.div>
                   ))}
                 </div>

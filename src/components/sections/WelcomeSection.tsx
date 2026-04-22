@@ -56,9 +56,9 @@ export const WelcomeSection = () => {
             className="text-white order-2 lg:order-1"
           >
             <p
-              className="text-xl md:text-2xl lg:text-3xl mb-3 md:mb-4"
+              className="text-xl md:text-2xl lg:text-3xl mb-3 md:mb-4 uppercase tracking-widest"
               style={{ 
-                fontFamily: "'Satisfy', cursive",
+                fontFamily: "'Inter', sans-serif",
                 color: '#FBE39D',
                 fontWeight: 400
               }}
@@ -69,7 +69,7 @@ export const WelcomeSection = () => {
             <h1
               className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal mb-4 md:mb-6 tracking-wider"
               style={{ 
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'Playfair Display', serif",
                 fontWeight: 400,
                 letterSpacing: '0.1em',
                 color: '#FBE39D'
@@ -81,7 +81,7 @@ export const WelcomeSection = () => {
             <p
               className="text-white text-base md:text-lg mb-8 md:mb-12 leading-relaxed"
               style={{ 
-                fontFamily: "'Raleway', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontWeight: 300
               }}
             >
@@ -93,7 +93,7 @@ export const WelcomeSection = () => {
               <h2
                 className="text-xl md:text-2xl lg:text-3xl font-normal mb-4 md:mb-6"
                 style={{ 
-                  fontFamily: "'Raleway', sans-serif",
+                  fontFamily: "'Playfair Display', serif",
                   fontWeight: 400,
                   letterSpacing: '0.05em',
                   color: '#FBE39D'
@@ -112,7 +112,7 @@ export const WelcomeSection = () => {
                     viewport={{ once: true }}
                     className="text-sm md:text-base leading-relaxed flex items-start gap-2"
                     style={{ 
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'Inter', sans-serif",
                       fontWeight: 300
                     }}
                   >

@@ -64,9 +64,9 @@ export const Contact = () => {
           >
             {/* Subtitle - Cursive */}
             <p
-              className="text-3xl md:text-4xl mb-6"
+              className="text-3xl md:text-4xl mb-6 uppercase tracking-widest"
               style={{ 
-                fontFamily: "'Satisfy', cursive",
+                fontFamily: "'Inter', sans-serif",
                 color: '#FBE39D'
               }}
             >
@@ -147,7 +147,7 @@ export const Contact = () => {
               <p
                 className="text-white text-base md:text-lg"
                 style={{ 
-                  fontFamily: "'Raleway', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 300
                 }}
               >

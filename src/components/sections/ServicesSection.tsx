@@ -186,7 +186,7 @@ export const ServicesSection = () => {
                     <h3
                       className="text-xl font-normal mb-3 tracking-wide"
                       style={{ 
-                        fontFamily: "'Raleway', sans-serif",
+                        fontFamily: "'Playfair Display', serif",
                         fontWeight: 400,
                         color: '#FBE39D'
                       }}

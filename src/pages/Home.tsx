@@ -38,9 +38,9 @@ export const Home = () => {
             className="text-center mb-12"
           >
             <p
-              className="text-3xl md:text-4xl mb-4"
+              className="text-3xl md:text-4xl mb-4 uppercase tracking-widest"
               style={{ 
-                fontFamily: "'Satisfy', cursive",
+                fontFamily: "'Inter', sans-serif",
                 color: '#D4AF37'
               }}
             >

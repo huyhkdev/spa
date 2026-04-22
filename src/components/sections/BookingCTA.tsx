@@ -103,7 +103,7 @@ export const BookingCTA = () => {
           <h2
             className="text-3xl md:text-4xl lg:text-5xl font-normal mb-4 text-white tracking-wider"
             style={{
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'Playfair Display', serif",
               fontWeight: 400,
             }}
           >
@@ -125,7 +125,7 @@ export const BookingCTA = () => {
           <p
             className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-8 tracking-wide"
             style={{
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'Playfair Display', serif",
               fontWeight: 300,
             }}
           >
@@ -139,7 +139,7 @@ export const BookingCTA = () => {
             rel="noopener noreferrer"
             className="inline-block px-12 py-4 bg-white/95 hover:bg-white text-[#9B4444] rounded-full text-sm md:text-base font-medium uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl"
             style={{
-              fontFamily: "'Raleway', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontWeight: 500,
             }}
             whileHover={{ scale: 1.05 }}

@@ -129,9 +129,9 @@ export const Testimonials = () => {
           className="text-center mb-12 md:mb-16"
         >
           <p
-            className="text-3xl md:text-4xl mb-4"
+            className="text-3xl md:text-4xl mb-4 uppercase tracking-widest"
             style={{
-              fontFamily: "'Satisfy', cursive",
+              fontFamily: "'Inter', sans-serif",
               color: '#D4AF37'
             }}
           >
@@ -218,7 +218,7 @@ export const Testimonials = () => {
                   <div>
                     <p
                       className="font-medium text-[#1A1A1A] text-sm"
-                      style={{ fontFamily: "'Raleway', sans-serif" }}
+                      style={{ fontFamily: "'Playfair Display', serif" }}
                     >
                       {getName(testimonial)}
                     </p>

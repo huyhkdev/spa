@@ -101,9 +101,9 @@ export const ProductsSection = () => {
           className="text-center mb-16 text-white"
         >
           <p
-            className="text-2xl md:text-3xl mb-4"
+            className="text-2xl md:text-3xl mb-4 uppercase tracking-widest"
             style={{ 
-              fontFamily: "'Satisfy', cursive",
+              fontFamily: "'Inter', sans-serif",
               color: '#D4AF37'
             }}
           >
@@ -152,7 +152,7 @@ export const ProductsSection = () => {
                   <h3
                     className="text-lg font-normal mb-3 tracking-wide"
                     style={{ 
-                      fontFamily: "'Raleway', sans-serif",
+                      fontFamily: "'Playfair Display', serif",
                       fontWeight: 400
                     }}
                   >

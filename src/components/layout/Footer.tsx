@@ -9,7 +9,7 @@ export const Footer = () => {
     { name: t('nav.home'), path: '/' },
     { name: t('nav.gallery'), path: '/hinh-anh' },
     { name: t('nav.services'), path: '/dich-vu' },
-    { name: t('nav.booking'), path: '/dat-lich' },
+    // { name: t('nav.booking'), path: '/dat-lich' },
     // { name: t('nav.news'), path: '/tin-tuc' },
     { name: t('nav.contact'), path: '/lien-he' }
   ];
@@ -46,7 +46,11 @@ export const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone size={16} className="text-[#D4AF37]" />
-                <a href="tel:0915954699" className="text-sm text-white/80 hover:text-[#D4AF37] transition-colors">
+                <a 
+                  href="tel:0915954699" 
+                  className="text-sm text-white/80 hover:text-[#D4AF37] transition-colors"
+                  style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
+                >
                   0915 954 699
                 </a>
               </div>

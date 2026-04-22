@@ -23,7 +23,7 @@ export interface PriceItem {
   id: string;
   name: string;
   nameEn: string;
-  nameKo: string;
+  nameKo?: string;
   description?: string;
   descriptionEn?: string;
   descriptionKo?: string;

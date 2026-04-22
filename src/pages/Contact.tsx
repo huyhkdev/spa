@@ -125,8 +125,8 @@ export const Contact = () => {
               <p
                 className="text-white text-base md:text-lg"
                 style={{ 
-                  fontFamily: "'Raleway', sans-serif",
-                  fontWeight: 400
+                  fontFamily: "'Inter', sans-serif",
+                  fontWeight: 500
                 }}
               >
                 {content.phone}

@@ -21,7 +21,7 @@ export const Header = () => {
     { name: t('nav.home'), path: '/' },
     { name: t('nav.gallery'), path: '/hinh-anh' },
     { name: t('nav.services'), path: '/dich-vu' },
-    { name: t('nav.booking'), path: '/dat-lich' },
+    // { name: t('nav.booking'), path: '/dat-lich' },
     // { name: t('nav.news'), path: '/tin-tuc' },
     { name: t('nav.contact'), path: '/lien-he' }
   ];
@@ -35,9 +35,9 @@ export const Header = () => {
       animate={{ y: 0 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="relative flex items-center justify-between h-20">
           {/* Logo - Left */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 z-10">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-3"
@@ -51,8 +51,8 @@ export const Header = () => {
             </motion.div>
           </Link>
 
-          {/* Desktop Navigation - Center */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation - Absolute Center */}
+          <nav className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -67,7 +67,7 @@ export const Header = () => {
           </nav>
 
           {/* Language Dropdown & Booking Button - Right */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4 z-10">
             {/* Language Dropdown */}
             <div className="relative">
               <select
@@ -89,7 +89,7 @@ export const Header = () => {
               >
                 <option value="vi">🇻🇳 Tiếng Việt</option>
                 <option value="en">🇬🇧 English</option>
-                <option value="ko">🇰🇷 한국어</option>
+                {/* <option value="ko">🇰🇷 한국어</option> */}
               </select>
             </div>
 

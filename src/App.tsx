@@ -4,10 +4,10 @@ import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
 import { Gallery } from './pages/Gallery';
-import { Services } from './pages/Services';
+// import { Services } from './pages/Services';
 import { Booking } from './pages/Booking';
-import { News } from './pages/News';
-import { NewsDetail } from './pages/NewsDetail';
+// import { News } from './pages/News';
+// import { NewsDetail } from './pages/NewsDetail';
 import { Contact } from './pages/Contact';
 
 function AppContent() {

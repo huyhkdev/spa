@@ -158,7 +158,7 @@ export const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15, duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-[#F5E6D3] rounded-lg p-6 shadow-lg relative"
+              className="bg-[#F5E6D3] rounded-lg p-6 shadow-lg relative flex flex-col"
             >
               {/* Header Badge */}
               {/* <div className="absolute -top-3 left-6 bg-[#9B4444] px-4 py-1 rounded-full">
@@ -189,7 +189,7 @@ export const Testimonials = () => {
               </div>
 
               {/* Review Text */}
-              <div className="bg-white rounded-lg p-4 mb-4 relative">
+              <div className="bg-white rounded-lg p-4 mb-4 relative min-h-[168px] flex items-center">
                 <p
                   className="text-sm text-gray-700 leading-relaxed"
                   style={{ fontFamily: "'Inter', sans-serif" }}
@@ -206,7 +206,7 @@ export const Testimonials = () => {
               </div>
 
               {/* Author Info */}
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#D4AF37]">
                     <img
